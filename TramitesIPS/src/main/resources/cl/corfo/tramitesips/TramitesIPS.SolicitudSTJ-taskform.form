@@ -1,0 +1,58 @@
+
+<form id="855978144">
+<property name="name" value="TramitesIPS.SolicitudSTJ-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="6" name="msgServicio" type="InputText" id="1018294655">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;msgServicio (msgServicio)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="msgServicio"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="isServicio" type="CheckBox" id="91866068">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;isServicio (isServicio)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="isServicio"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="1" name="contribuyente_esAuthSII" type="CheckBox" id="1686636574">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;esAuthSII (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/esAuthSII"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="3" name="contribuyente_rut" type="InputTextLong" id="603819279">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;rut (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/rut"/>
+<property name="fieldClass" value="java.lang.Long"/>
+</field>
+<field position="4" name="contribuyente_token" type="InputText" id="1396055823">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;token (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/token"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="2" name="contribuyente_esAuthSRCeI" type="CheckBox" id="391568895">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;esAuthSRCeI (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/esAuthSRCeI"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="0" name="contribuyente_dv" type="InputText" id="1192090543">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;dv (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/dv"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="" name="#0000A0" type="dataModelerEntry" outId="contribuyente" value="cl.corfo.tramitesips.Contribuyente" id="contribuyente"/>
+<dataHolder inputId="" name="#FF54A7" type="basicType" outId="isServicio" value="java.lang.Boolean" id="isServicio"/>
+<dataHolder inputId="" name="#A7E690" type="basicType" outId="msgServicio" value="java.lang.String" id="msgServicio"/>
+</form>

@@ -1,0 +1,22 @@
+
+<form id="1533425809">
+<property name="name" value="ingresoDatosPatente-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="fechaPatente" type="InputDate" id="512035211">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;_fechaPatente (fechaPatente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="_fechaPatente"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="1" name="numeroPatente" type="InputText" id="1942095550">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;_numPatente (numeroPatente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="_numPatente"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="" name="#A7E690" type="basicType" outId="_fechaPatente" value="java.util.Date" id="fechaPatente"/>
+<dataHolder inputId="" name="#B29FE4" type="basicType" outId="_numPatente" value="java.lang.String" id="numeroPatente"/>
+</form>

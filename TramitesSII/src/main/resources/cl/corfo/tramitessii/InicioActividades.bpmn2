@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_A58EMLf9EeWRNJIukErjsw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="6.2.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+  <bpmn2:itemDefinition id="_contribuyenteItem" structureRef="cl.corfo.tramitessii.Contribuyente"/>
+  <bpmn2:process id="TramitesSII.InicioActividades" drools:packageName="org.jbpm" drools:version="1.0" name="InicioActividades" isExecutable="true">
+    <bpmn2:extensionElements>
+      <drools:import name="cl.corfo.tramitessii.Contribuyente"/>
+    </bpmn2:extensionElements>
+    <bpmn2:property id="contribuyente" itemSubjectRef="_contribuyenteItem"/>
+    <bpmn2:laneSet id="_A58EMbf9EeWRNJIukErjsw">
+      <bpmn2:lane id="_EB5490B4-216D-4E9E-BDD3-9A93880D7959" drools:bgcolor="#ffffff" drools:selectable="true" name="Contribuyente">
+        <bpmn2:flowNodeRef>processStartEvent</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="_27161C19-E505-4CC0-A988-45D9F9FB0E77" drools:bgcolor="#ffffff" drools:selectable="true" name="EE">
+        <bpmn2:flowNodeRef>_CBBCE403-BC6A-4899-AE99-EA2E94CBF479</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_1448F372-8E8D-4D70-B11B-5D170AB069D3</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+    </bpmn2:laneSet>
+    <bpmn2:sequenceFlow id="_FED0AD05-299C-4246-BB84-D784E3865C66" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_CBBCE403-BC6A-4899-AE99-EA2E94CBF479" targetRef="_1448F372-8E8D-4D70-B11B-5D170AB069D3"/>
+    <bpmn2:sequenceFlow id="_70E5F40C-81AA-4875-86D7-681F2D5809E8" drools:bgcolor="#000000" drools:selectable="true" sourceRef="processStartEvent" targetRef="_CBBCE403-BC6A-4899-AE99-EA2E94CBF479"/>
+    <bpmn2:startEvent id="processStartEvent" drools:bgcolor="#9acd32" drools:selectable="true" name="">
+      <bpmn2:outgoing>_70E5F40C-81AA-4875-86D7-681F2D5809E8</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:scriptTask id="_CBBCE403-BC6A-4899-AE99-EA2E94CBF479" drools:selectable="true" name="LOG de Informaci&#243;n" scriptFormat="http://www.java.com/java">
+      <bpmn2:incoming>_70E5F40C-81AA-4875-86D7-681F2D5809E8</bpmn2:incoming>
+      <bpmn2:outgoing>_FED0AD05-299C-4246-BB84-D784E3865C66</bpmn2:outgoing>
+      <bpmn2:script><![CDATA[System.out.println("El contribuyente RUT: " + contribuyente.getRut() + " ha dado inicio a trámite de Inicio de Actividades");]]></bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:endEvent id="_1448F372-8E8D-4D70-B11B-5D170AB069D3" drools:bgcolor="#ff6347" drools:selectable="true" name="">
+      <bpmn2:incoming>_FED0AD05-299C-4246-BB84-D784E3865C66</bpmn2:incoming>
+      <bpmn2:terminateEventDefinition id="_A58rQLf9EeWRNJIukErjsw"/>
+    </bpmn2:endEvent>
+    <bpmn2:association id="_069BE0DF-A5E4-4B89-ABA6-75DF42EAC88C" drools:selectable="true" drools:type="none" sourceRef="_EC796753-4DE5-4CC9-B945-28A74D2F3D2B" targetRef="_CBBCE403-BC6A-4899-AE99-EA2E94CBF479"/>
+    <bpmn2:association id="_CAD43D8F-25F1-4963-BADA-55FABD18B9E7" drools:selectable="true" drools:type="none" sourceRef="_533E6E1B-397D-40B2-B3D6-FA535491100B" targetRef="processStartEvent"/>
+    <bpmn2:textAnnotation id="_533E6E1B-397D-40B2-B3D6-FA535491100B" drools:selectable="true">
+      <bpmn2:text>En el inicio del proceso, se ingresan los datos del contribuyente</bpmn2:text>
+    </bpmn2:textAnnotation>
+    <bpmn2:textAnnotation id="_EC796753-4DE5-4CC9-B945-28A74D2F3D2B" drools:selectable="true">
+      <bpmn2:text>Dentro de la traza, se setea la información del trámite y se imprime en el log del BPMS</bpmn2:text>
+    </bpmn2:textAnnotation>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_A58rQbf9EeWRNJIukErjsw">
+    <bpmndi:BPMNPlane id="_A58rQrf9EeWRNJIukErjsw" bpmnElement="TramitesSII.InicioActividades">
+      <bpmndi:BPMNEdge id="_A58rQ7f9EeWRNJIukErjsw" bpmnElement="_FED0AD05-299C-4246-BB84-D784E3865C66">
+        <di:waypoint xsi:type="dc:Point" x="1385.0" y="846.0"/>
+        <di:waypoint xsi:type="dc:Point" x="539.0" y="100.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_A58rRLf9EeWRNJIukErjsw" bpmnElement="_70E5F40C-81AA-4875-86D7-681F2D5809E8">
+        <di:waypoint xsi:type="dc:Point" x="700.0" y="640.0"/>
+        <di:waypoint xsi:type="dc:Point" x="455.0" y="170.0"/>
+        <di:waypoint xsi:type="dc:Point" x="365.0" y="100.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_A58rRbf9EeWRNJIukErjsw" bpmnElement="processStartEvent">
+        <dc:Bounds height="30.0" width="30.0" x="185.0" y="155.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_A58rRrf9EeWRNJIukErjsw" bpmnElement="_CBBCE403-BC6A-4899-AE99-EA2E94CBF479">
+        <dc:Bounds height="80.0" width="100.0" x="405.0" y="360.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_A58rR7f9EeWRNJIukErjsw" bpmnElement="_1448F372-8E8D-4D70-B11B-5D170AB069D3">
+        <dc:Bounds height="28.0" width="28.0" x="615.0" y="386.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="_A58rSLf9EeWRNJIukErjsw" bpmnElement="_069BE0DF-A5E4-4B89-ABA6-75DF42EAC88C">
+        <di:waypoint xsi:type="dc:Point" x="566.0" y="487.0"/>
+        <di:waypoint xsi:type="dc:Point" x="455.0" y="485.0"/>
+        <di:waypoint xsi:type="dc:Point" x="315.0" y="100.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_A58rSbf9EeWRNJIukErjsw" bpmnElement="_CAD43D8F-25F1-4963-BADA-55FABD18B9E7">
+        <di:waypoint xsi:type="dc:Point" x="292.5" y="252.5"/>
+        <di:waypoint xsi:type="dc:Point" x="200.0" y="251.0"/>
+        <di:waypoint xsi:type="dc:Point" x="95.0" y="125.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_A58rSrf9EeWRNJIukErjsw" bpmnElement="_533E6E1B-397D-40B2-B3D6-FA535491100B">
+        <dc:Bounds height="55.0" width="105.0" x="240.0" y="225.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_A58rS7f9EeWRNJIukErjsw" bpmnElement="_EC796753-4DE5-4CC9-B945-28A74D2F3D2B">
+        <dc:Bounds height="74.0" width="112.0" x="510.0" y="450.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_A58rTLf9EeWRNJIukErjsw" bpmnElement="_EB5490B4-216D-4E9E-BDD3-9A93880D7959">
+        <dc:Bounds height="250.0" width="600.0" x="90.0" y="45.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_A58rTbf9EeWRNJIukErjsw" bpmnElement="_27161C19-E505-4CC0-A988-45D9F9FB0E77">
+        <dc:Bounds height="250.0" width="600.0" x="90.0" y="300.0"/>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship id="_A58rTrf9EeWRNJIukErjsw" type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_70E5F40C-81AA-4875-86D7-681F2D5809E8" id="_A58rT7f9EeWRNJIukErjsw">
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_A58rULf9EeWRNJIukErjsw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_CBBCE403-BC6A-4899-AE99-EA2E94CBF479" id="_A58rUbf9EeWRNJIukErjsw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_FED0AD05-299C-4246-BB84-D784E3865C66" id="_A58rUrf9EeWRNJIukErjsw">
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_1448F372-8E8D-4D70-B11B-5D170AB069D3" id="_A58rU7f9EeWRNJIukErjsw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_A58EMLf9EeWRNJIukErjsw</bpmn2:source>
+    <bpmn2:target>_A58EMLf9EeWRNJIukErjsw</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>

@@ -1,0 +1,42 @@
+
+<form id="2136690361">
+<property name="name" value="TramitesDT.Certificado-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="2" name="contribuyente_esAuthSRCeI" type="CheckBox" id="356691985">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;esAuthSRCeI (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/esAuthSRCeI"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="3" name="contribuyente_rut" type="InputTextLong" id="1547235597">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;rut (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/rut"/>
+<property name="fieldClass" value="java.lang.Long"/>
+</field>
+<field position="0" name="contribuyente_dv" type="InputText" id="719827703">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;dv (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/dv"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="4" name="contribuyente_token" type="InputText" id="163956038">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;token (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/token"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="contribuyente_esAuthSII" type="CheckBox" id="215343860">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;esAuthSII (contribuyente)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="contribuyente/esAuthSII"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<dataHolder inputId="" name="#0000A0" type="dataModelerEntry" outId="contribuyente" value="cl.corfo.tramitesdt.Contribuyente" id="contribuyente"/>
+</form>

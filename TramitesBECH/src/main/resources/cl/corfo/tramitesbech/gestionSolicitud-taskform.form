@@ -1,0 +1,14 @@
+
+<form id="1770274556">
+<property name="name" value="gestionSolicitud-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="tieneAprobacion" type="CheckBox" id="1701454904">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;_hasApproved (tieneAprobacion)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="_hasApproved"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<dataHolder inputId="" name="#FF54A7" type="basicType" outId="_hasApproved" value="java.lang.Boolean" id="tieneAprobacion"/>
+</form>

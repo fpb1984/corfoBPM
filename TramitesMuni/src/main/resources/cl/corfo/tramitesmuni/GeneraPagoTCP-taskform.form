@@ -1,0 +1,14 @@
+
+<form id="1319839263">
+<property name="name" value="GeneraPagoTCP-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="isPago" type="CheckBox" id="1733287405">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;_isPago (isPago)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="_isPago"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<dataHolder inputId="" name="#B29FE4" type="basicType" outId="_isPago" value="java.lang.Boolean" id="isPago"/>
+</form>
